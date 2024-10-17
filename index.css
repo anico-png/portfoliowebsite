@@ -1,0 +1,370 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make body take up full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+body {
+    font-weight: lighter;
+    background-color: #FEF6DC;
+    color: #5F478F;
+    line-height: 1.6;
+    font-family: 'Fredoka', sans-serif;
+}
+
+body{
+    background-image: url(https://tinypic.host/images/2024/10/14/background-triangles.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size:cover;
+}
+
+/* Navigation Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FEF6DC;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: 40px;
+}
+
+nav ul {
+    display: flex;
+    margin-top: -14%;
+    gap: 3px;
+    margin-left: 200%;
+    white-space: nowrap;
+}
+
+nav ul li {
+    display: inline;
+    list-style: none;
+    padding: 25px;
+    position: relative; /* Necessary for dropdown positioning */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5F478F;
+    font-weight: lighter;
+    font-size: large;
+    font-family: 'Fredoka', sans-serif;
+}
+
+nav ul li a:hover {
+    color: #FFB400;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+    display: none; /* Hide the dropdown by default */
+    position: absolute; /* Position it below the "Works" item */
+    background-color: #FEF6DC; /* Same as the header background */
+    min-width: 160px; /* Width of the dropdown */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%; /* Position dropdown directly below the parent */
+    left: -180px; /* Align dropdown with the left edge of the parent */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show the dropdown when hovering over the parent */
+}
+
+/* Ensure each dropdown item is stacked vertically */
+.dropdown-content li {
+    padding: 10px 20px; /* Add some padding for better spacing */
+    display: block; /* Ensure items are block elements to stack vertically */
+}
+
+.dropdown-content li a {
+    color: #5F478F; /* Dropdown item color */
+}
+
+.dropdown-content li a:hover {
+    color:#6f4aa2; /* Change color on hover */
+    font-family: 'Federo';
+    text-decoration: none;
+}
+
+
+/* Character Image Positioned at Top Right Corner */
+.character {
+    position: absolute; /* Ensure the character can move outside the container */
+    top: 10px; /* Starting position at the top */
+    right: 550px; /* Keep it at the right side */
+    width: 150px;
+    height: 90px;
+    object-fit: contain;
+    
+    /* Animation properties */
+    animation: moveInPauseAndOut 7s ease-in-out infinite;
+}
+
+/* Keyframes to move the character in, pause, and then move out */
+@keyframes moveInPauseAndOut {
+    0% {
+        top: -100px; /* Start off-screen (above) */
+    }
+    40% {
+        top: -20px; /* Move into the screen */
+    }
+    60% {
+        top: -20px; /* Pause in place for 2 seconds */
+    }
+    100% {
+        top: -150px; /* Move back out of the screen */
+    }
+}
+
+
+/* Tagline Section */
+.center-text {
+    flex-grow: 1; /* Ensures the main content takes the available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px; /* Adjust this value to move the tagline down */
+}
+
+.text h1 {
+    font-size: 5rem;
+    font-family: 'Federo', sans-serif;
+    height: 80px;
+    font-weight: lighter;
+    color: #5F478F;
+    position: relative;
+    top: 140px;
+}
+
+.text h3 {
+    font-size: 1rem;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 300;
+    color: #5F478F;
+    letter-spacing: 1.5rem;
+    margin-top: 40px;
+    position: relative;
+    top: 140px;
+}
+
+.character2 {
+    position: relative;
+    top: 160px;
+    left: -100px;
+    width: 50%;
+    height: 1300px;
+    text-align: center;
+}
+
+.character2-image {
+    width: 20px;
+    height:90px;
+    top: 150px;
+    left: -10px;
+}
+
+/* Circles Image */
+.circles {
+    position: absolute;
+    top: 450px;
+    right: 0px;
+
+}
+
+.background circles img {
+    width: 300px;
+    height: auto;
+}
+
+/* Container to hold sections */
+.right-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align content to the right */
+    padding: 80px;
+    margin-bottom: 20px; /* Adds space between containers */
+    position: relative;
+    top: -900px;
+}
+
+/* Text Box Styling */
+.right-text {
+    width: 650px;
+    padding: 30px;
+    background-color: #f8f4e1;
+    border-radius: 10px;
+    margin-left: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: right; /* Align text to the left */
+    height: -200px;
+}
+
+/* H2 Styling - What do we do? As UIUX designer, etc. */
+h2 {
+    font-family: 'Federo', sans-serif;
+    font-weight: lighter;
+    font-size: 3rem;
+    color: #6f4aa2; /* Purple color for the headings */
+    margin-bottom: 20px;
+    top: 70px;
+}
+
+/* H4 Styling - Regular text */
+h4 {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: lighter;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #6f4aa2; /* Same purple tone as heading */
+    margin: 10px 0;
+}
+
+/* H5 Styling - Bold text */
+h5 {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #6f4aa2;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+    background-color: #FEF6DC; /* Adjust background color as needed */
+}
+
+footer {
+    background-color: #9A71C1; /* Purple background */
+    color: #5F478F;
+    padding: 40px 20px;
+    margin-top: -850px;
+    text-align: center;
+    position: relative;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.footer-content h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #5F478F;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: white; /* Change text color to white */
+}
+
+/* Email and Phone Styling */
+.email-phone {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.email-phone a {
+    color: white; /* Make text white */
+    text-decoration: none;
+}
+
+.email-phone a:hover {
+    text-decoration: underline;
+}
+
+/* Divider Line Between Email/Phone and Others/Instagram */
+.divider {
+    width: 2px;
+    height: 80px;
+    background-color: #5F478F;
+}
+
+/* Others and Instagram Styling */
+.other-instagram {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.other-instagram a {
+    color: white; /* Make text white */
+    text-decoration: none;
+}
+
+.other-instagram a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 0.9rem;
+    color: #D5C8E1;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+    color: #5F478F;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Back to Top button */
+.back-to-top {
+    position: absolute;
+    top: 10px; /* Adjust this value to fine-tune vertical position */
+    right: 20px; /* Adjust this value to fine-tune horizontal position */
+    display: flex;
+    align-items: center;
+    color: #5F478F;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.back-to-top i {
+    margin-right: 5px;
+}
+
+.dot {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%; /* Use '50%' for a perfect circle */
+    background-color: #5F478F;
+    position: absolute; /* Allows positioning based on JavaScript */
+    z-index: 10; /* Ensures it appears above other elements */
+    pointer-events: none; /* Prevents blocking clicks */
+}

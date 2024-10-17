@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka', sans-serif;
+}
+
+body {
+    background: url('https://tinypic.host/images/2024/10/14/street-photography.png') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.connect-container {
+    display: flex;
+    background-color: #5F478F;
+    border-radius: 10px;
+    padding: 30px;
+    width: 80%;
+    max-width: 1200px;
+    color: white;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.contact-details p {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.contact-details i {
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.contact-details a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.contact-details a:hover,
+.contact-details a:hover i {
+    color: #FFD700; /* Gold color for both text and icon on hover */
+}
+
+.form-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #6C548E;
+    border-radius: 10px;
+}
+
+.form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    width: 100%;
+}
+
+button {
+    background-color: #f0a500;
+    border: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d98800;
+}
+
+@media (max-width: 768px) {
+    .connect-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anico - Designer Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Federo&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="product-design.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <img src="https://tinypic.host/images/2024/10/14/logo-png-final.png" alt="Anico Logo" class="logo">
+            <img src="https://tinypic.host/images/2024/10/14/character-small.png" alt="character" class="small">
+            <ul class="nav_list">
+                <li class="nav_item">
+                    <a class="nav_link" href="/index.html">home</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav_link" href="about-me.html">about me</a>
+                </li>
+                <li class="nav_item dropdown">
+                    <a class="nav_link" href="/works.html">works</a>
+                    <ul class="dropdown-content">
+                        <li><a class="nav_link" href="/uiux.html">UI/UX</a></li>
+                        <li><a class="nav_link" href="/graphuc-design.html">Graphic Design</a></li>
+                        <li><a class="nav_link" href="/product-design.html">Product Design</a></li>
+                    </ul>
+                </li>
+                <li class="nav_item">
+                    <a class="nav_link" href="/resume.html">resume</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav_link" href="/connect.html">connect</a>
+                </li>
+            </ul>
+        </nav>
+</head>
+<body>
+
+    <div class="slider-container">
+        <div class="text-content">
+            <h2>Product Design</h2>
+            <p><strong>Why redesign a stove, you might ask?</strong> Through this project, I uncovered key issues that users face—problems they don’t always voice but definitely feel.</p>
+            <p>While I chose <strong>not to go fully digital</strong>, since people love the tactile experience of cooking, I saw <strong>room for improvement</strong>. I’ve added some futuristic touches to enhance the cooking process, making it more <strong>efficient</strong>, stress-free, and enjoyable, while still keeping that hands-on connection people love!</p>
+            <a href="https://www.behance.net/gallery/209439147/Futuristic-Gas-Stove-Design" target="_blank">See more</a>
+        </div>
+        <div class="image-container">
+            <div class="slider-images">
+                <img src="https://tinypic.host/images/2024/10/17/1e4c9053951ed2c90.png" class="active" alt="Futuristic Stove Design 1">
+                <img src="https://tinypic.host/images/2024/10/17/23b96627cac0f23e3.png" alt="Futuristic Stove Design 2">
+                <img src="https://tinypic.host/images/2024/10/17/31cb3d86c1d812ebd.png" alt="Futuristic Stove Design 3">
+                <img src="https://tinypic.host/images/2024/10/17/4687b6a29bf14f390.png" alt="Futuristic Stove Design 4">
+            </div>
+            <!-- Slider navigation buttons -->
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        let slides = document.querySelectorAll('.slider-images img');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.opacity = '0'; // hide all slides
+                slide.classList.remove('active');
+            });
+
+            slides[index].style.opacity = '1'; // show the active slide
+            slides[index].classList.add('active');
+        }
+
+        function changeSlide(step) {
+            slideIndex += step;
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            } else if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            showSlide(slideIndex);
+        }
+
+        // Auto slide functionality (optional)
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000); // change slide every 5 seconds
+    </script>
+
+
+<div class="slider-container2">
+    <div class="text-content">
+        <h2>Futuristic Stove</h2>
+        <p><strong>SASA is a new and redesigned ideation of a vintage sewing machine</strong> inspired by the form of a mushroom (Reishi) to capture the <strong>endless beauty of the organic curves.</strong></p>
+        <br>
+        <p>It is <strong>designed to rejuvenate</strong> the lively spirit of the user. SASA symbolises new beginnings, growth, and the potential for<strong>positive change.</strong></p>
+        <a href="#">See more</a>
+    </div>
+    <div class="image-container2">
+        <div class="slider-images2">
+            <img src="https://tinypic.host/images/2024/10/17/5f220ba0b98aa1002.png" class="active" alt="Futuristic Stove Design 1">
+        </div>
+        <!-- Slider navigation buttons -->
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+</div>
+
+<script>
+    let slideIndex = 0;
+    let slides = document.querySelectorAll('.slider-images img');
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.opacity = '0'; // hide all slides
+            slide.classList.remove('active');
+        });
+
+        slides[index].style.opacity = '1'; // show the active slide
+        slides[index].classList.add('active');
+    }
+
+    function changeSlide(step) {
+        slideIndex += step;
+        if (slideIndex >= slides.length) {
+            slideIndex = 0;
+        } else if (slideIndex < 0) {
+            slideIndex = slides.length - 1;
+        }
+        showSlide(slideIndex);
+    }
+
+    // Auto slide functionality (optional)
+    setInterval(() => {
+        changeSlide(1);
+    }, 5000); // change slide every 5 seconds
+</script>
+
+</body>
+</html>

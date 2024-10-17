@@ -1,0 +1,289 @@
+/* Enable smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+/* General body styling */
+body {
+    background-color: #3C2F51;
+    background-image: url('images/background for works.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* Navigation Styles */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 45px;
+    margin-top: -30px;
+}
+
+.logo {
+    margin-top: 10px;
+    margin-left: -25px;
+    width: 40px;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px; /* Adjust spacing between nav items */
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    position: relative; /* Necessary for dropdown positioning */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5F478F;
+    font-weight: lighter;
+    font-size: large;
+    font-family: 'Fredoka', sans-serif;
+}
+
+nav ul li a:hover {
+    color: #FFB400;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/* Dropdown Styles */
+.dropdown-content {
+    display: none; /* Hide the dropdown by default */
+    position: absolute; /* Position it below the "Works" item */
+    background-color: #FEF6DC; /* Same as the header background */
+    min-width: 180px; /* Width of the dropdown */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%; /* Position dropdown directly below the parent */
+    left: 0;
+    opacity: 75%;
+    border-radius: 10px;
+    padding: 0; /* Remove any padding that could affect text alignment */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show the dropdown when hovering over the parent */
+}
+
+/* Ensure each dropdown item is stacked vertically */
+.dropdown-content li {
+    padding: 10px 0; /* Add some padding for better spacing between items */
+    display: block; /* Ensure items are block elements to stack vertically */
+    text-align: left; /* Align the text to the left */
+}
+
+.dropdown-content li a {
+    padding: 10px 20px; /* Add padding inside the link element */
+    text-align: left; /* Make sure the text inside the link aligns to the left */
+    color: #5F478F; /* Dropdown item color */
+    display: block; /* Ensure the link takes the full width of the dropdown */
+}
+
+.dropdown-content li a:hover {
+    color: #6f4aa2; /* Change color on hover */
+    font-family: 'Federo';
+    text-decoration: none;
+}
+
+.small {
+    width: 90px;
+    top: -10px;
+    margin-top: 5px;
+    margin-right: -950px;
+}
+
+
+/* Character Image Positioned at Top Right Corner */
+.character {
+    display: flex;
+    margin-top: -12%;
+    width: 150px;
+    height: 90px;
+    gap: 3px;
+    margin-left: 175%;
+    white-space: nowrap;
+    object-fit: contain;
+}
+
+h1 {
+    margin-left: 70px;
+    margin-top: 20px;
+    font-family: 'Federo';
+    font-weight:lighter;
+    font-size: 4em;
+    display: flex;
+    color:#FFB400
+}
+
+/* Banner Styling */
+.banner {
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Takes full screen height */
+}  
+
+.phone-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: -60px;
+    gap: 10px; /* Gap between the images */
+   
+}
+
+.phone-container:hover .phone-item{
+    filter: grayscale(1) blur(2px);
+}
+.phone-container:hover .phone-item:hover {
+    filter:none
+}
+
+.phone-item {
+    width: 350px; /* Width of each phone image */
+    transform: scale(1); /* Default size */
+    transition: transform 0.3s ease; /* Smooth animation */
+    position: relative;
+}
+
+.phone-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Central phone larger and in front */
+.phone-item:nth-child(2) {
+    transform: scale(1.1); /* Enlarge the center phone */
+    z-index: 1; /* Bring it in front */
+}
+
+/* Align the phone items vertically with different offsets */
+.phone-item:nth-child(1) {
+    width: 350px;
+    height: auto;
+    top: -65px;
+    left: 90px;
+    transform: translateY(30px);
+
+}
+.phone-item:nth-child(3) {
+    width: 365px;
+    height: auto;
+    top: -65px;
+    left: -100px;
+    transform: translateY(30px);
+}
+
+/* Hover effect */
+.phone-item:hover {
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card-container-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns in first row */
+    grid-template-rows: auto auto; /* Two rows */
+    grid-gap: 90px 0px; /* Row gap more, column gap less */
+    justify-items: center;
+    margin: 30px 200px;
+    max-width: 1200px; /* Container max width */
+}
+
+.card-container:nth-child(2){
+    margin-left: -180px;
+}
+
+.card-container:nth-child(4){
+    margin-left: 400px;
+}
+.card-container:nth-child(5) {
+    grid-column: span 2; /* 4th and 5th cards take 2 columns */
+    justify-self: center;
+
+}
+
+.card-container {
+    perspective: 1000px;
+    width: 200px;
+    height: 300px;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-color: #3AB07;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FEF6DC;
+    overflow: hidden;
+}
+
+.front img {
+    width: 150%; /* Ensures the image takes the full width */
+    height: 400px; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Federo', sans-serif;
+    font-weight: lighter;
+    font-size: 2.5em;
+    background-color: #FEF6DC;
+    color:#3C2F51;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.video-section {
+    margin-top: 200px;
+    width: 100vw;
+    height: 115vh;
+    overflow: hidden;
+}
